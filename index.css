@@ -1,0 +1,275 @@
+ :root {
+        --bg: #f3eefe;
+        --accent: #6b46c1;
+        --accent-2: #9b59ff;
+        --card-bg: rgba(255, 255, 255, 0.55);
+        --glass-border: rgba(255, 255, 255, 0.6);
+        --muted: #6b6b7a;
+        --card-radius: 14px;
+        --glass-shadow: 0 6px 18px rgba(99, 70, 234, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+          Roboto, Arial;
+        background: linear-gradient(180deg, var(--bg), #efe7ff 60%);
+        color: #0f172a;
+        padding: 20px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* header */
+      header {
+        max-width: 1200px;
+        margin: 0 auto 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .logo {
+        width: 64px;
+        height: 64px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: #fff;
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+        overflow: hidden;
+      }
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .brand h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        border: 0;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .btn.call {
+        color: white;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        box-shadow: var(--glass-shadow);
+      }
+      .btn.cta {
+        background: #fff;
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+      }
+
+      /* hero (text-only per user's choice) */
+      .hero {
+        max-width: 1200px;
+        margin: 8px auto 20px;
+        padding: 20px;
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.6)
+        );
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+      }
+
+      .hero p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 18px auto 60px;
+        padding: 0 6px;
+      }
+
+      /* controls */
+      .controls {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+        align-items: center;
+      }
+      .search {
+        flex: 1;
+        min-width: 180px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid var(--glass-border);
+        background: var(--card-bg);
+        outline: none;
+      }
+
+      /* listings grid + cards */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.65),
+          rgba(255, 255, 255, 0.5)
+        );
+        border: 1px solid var(--glass-border);
+        border-radius: var(--card-radius);
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        min-height: 420px; /* ✅ added fixed min height for taller card */
+        box-shadow: var(--glass-shadow);
+        transition: transform 0.18s ease, opacity 0.18s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+      }
+
+      .media {
+        height: 240px; /* ✅ taller image */
+        border-radius: 14px;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08); /* subtle depth */
+      }
+
+      .category {
+        display: inline-block;
+        font-size: 12px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: white;
+        padding: 6px 8px;
+        border-radius: 8px;
+      }
+
+      .title {
+        font-weight: 800;
+      }
+      .desc {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .meta-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+      }
+      .price {
+        font-weight: 800;
+        color: #0f172a;
+      }
+
+      /* button row */
+      .button-row {
+        display: flex;
+        gap: 8px;
+        margin-top: 6px;
+      }
+      .call-btn,
+      .status-btn {
+        flex: 1;
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        font-weight: 700;
+        cursor: pointer;
+        color: white;
+        transition: opacity 0.15s;
+      }
+      .call-btn {
+        background: #3a206a;
+      }
+      .call-btn:hover {
+        background: #5b3ba1;
+      }
+      .call-btn.disabled {
+        background: #888;
+        opacity: 0.8;
+        cursor: not-allowed;
+      }
+
+      /* status colors: available = green, sold = red (auto) */
+      .status-btn.available {
+        background: #16a34a;
+      } /* green */
+      .status-btn.sold {
+        background: #ef4444;
+      } /* red */
+
+      /* faded look for sold card (optional visual hint) */
+      .card.sold {
+        opacity: 0.7;
+      }
+
+      footer {
+        max-width: 1200px;
+        margin: 30px auto;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+
+      /* responsive adjustments */
+      @media (max-width: 880px) {
+        .hero h2 {
+          font-size: 18px;
+        }
+      }
+      @media (max-width: 640px) {
+        .media {
+          height: 280px; /* ✅ larger image for mobile view */
+        }
+        .card {
+          min-height: 460px; /* ✅ slightly taller on small screens */
+        }
+
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+        .logo {
+          width: 56px;
+          height: 56px;
+        }
+      }
