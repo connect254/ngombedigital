@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>NgombeDigital — Tharaka Nithi Livestock ONLINE Marketplace</title>
+    <title>NgombeHub — Community Livestock Marketplace</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -69,10 +69,8 @@
 
       <section id="contact">
         <div>
-          Helpline 1: <strong>0716 808 125</strong> —
+          Helpline: <strong>0716 808 125</strong> —
           <em>Kithemba(julius mutembei)</em>
-          Helpline 2: <strong>0713943315</strong> —
-          <em>marto(site admin)</em>
         </div>
       </section>
 
@@ -83,7 +81,7 @@
 
     <script>
       /* Admin phone (used by Post Listing and admin call) */
-      const ADMIN_PHONE = "tel:+254713943315";
+      const ADMIN_PHONE = "tel:+254716808125";
 
       /* Sample listings - replace phone values when you update your data */
       const SAMPLE = [
@@ -91,20 +89,82 @@
           id: 1,
           title: "Dairy Cow (Friesian)",
           category: "Dairy cows",
-          price: 125000,
-          desc: "High milk yield. 4 years. Located: Nyeri.",
+          price: 85000,
+          desc: "Milk 7 litres, Calves-1. Location: Ntumu,-below kiamaogo,baragu route .",
+          img: "mifugo.photos/fresiaxnph.jpg",
+          phone: "tel:+254735589731",
+          status: "available", // "Available" or "Sold"
+        },
+        {
+          id: 1,
+          title: "Dairy Cow (Friesian)",
+          category: "Dairy cows",
+          price: 85000,
+          desc: "Milk 7 litres, Calves-1. Location: Ntumu,-below kiamaogo,baragu route .",
+          img: "mifugo.photos/one.jpg",
+          phone: "tel:+254735589731",
+          status: "available", // "Available" or "Sold"
+        },
+        {
+          id: 1,
+          title: "Dairy Cow (Friesian)",
+          category: "Dairy cows",
+          price: 85000,
+          desc: "Milk 7 litres, Calves-1. Location: Ntumu,-below kiamaogo,baragu route .",
+          img: "mifugo.photos/two.jpg",
+          phone: "tel:+254735589731",
+          status: "available", // "Available" or "Sold"
+        },
+
+        {
+          id: 2,
+          title: "Dairy Cow (Friesian)",
+          category: "Dairy cows",
+          price: 90000,
+          desc: "High milk yield 10 litres, 1 calf.Located: Kieni.",
           img: "mifugo.photos/fresianph.jpg",
-          phone: "tel:+254700111111",
+          phone: "tel:+254716808125",
+          status: "Availble", // "Available" or "Sold"
+        },
+        {
+          id: 3,
+          title: "Dairy Cow (Friesian)",
+          category: "Dairy cows",
+          price: 115000,
+          desc: "High milk yield 10 litres, 1 calf.Located: Karia.",
+          img: "mifugo.photos/fresianph.jpg",
+          phone: "tel:+254716808125",
+          status: "available", // "Available" or "Sold"
+        },
+        {
+          id: 3,
+          title: "Dairy Cow (Friesian)",
+          category: "Dairy cows",
+          price: 110000,
+          desc: "milk 10 litres, 1 calf.Located: mutunguru.",
+          img: "mifugo.photos/fresianph.jpg",
+          phone: "tel:+254716808125",
+          status: "available", // "Available" or "Sold"
+        },
+        {
+          id: 1,
+          title: "Dairy Cow (Friesian)",
+          category: "Dairy cows",
+          price: 12000,
+          desc: "Milk 15 litres, Calves-3. Location:chogoria.",
+          img: "mifugo.photos/fresianph.jpg",
+          phone: "tel:+254735589731",
           status: "sold", // "Available" or "Sold"
         },
         {
-          title: "Boer Goats (2)",
-          category: "Goats",
-          price: "KSh 20,000",
-          desc: "Healthy and dewormed goats ready for sale.",
-          phone: "+254700222222",
-          img: "mifugo.photos/bg.jpg",
-          status: "Available",
+          id: 1,
+          title: "Dairy Cow (Friesian)",
+          category: "Dairy cows",
+          price: 125000,
+          desc: "High milk yield. 4 years. Located: Chogoria.",
+          img: "mifugo.photos/fresianzph.jpg",
+          phone: "tel:+254700111111",
+          status: "sold", // "Available" or "Sold"
         },
         {
           id: 2,
@@ -124,7 +184,7 @@
           desc: "Pregnant sows, well-fed. Located: Embu.",
           img: "https://images.unsplash.com/photo-1560242869-6b1a5b2f1b6b?q=80&w=1200",
           phone: "tel:+254700333333",
-          status: "Available",
+          status: "sold",
         },
         {
           id: 4,
@@ -134,7 +194,7 @@
           desc: "Well-rotted manure. Delivery available.",
           img: "https://images.unsplash.com/photo-1598387846319-0b8b80cc9c15?q=80&w=1200",
           phone: "tel:+254700444444",
-          status: "Available",
+          status: "sold",
         },
         {
           id: 4,
@@ -144,7 +204,7 @@
           desc: "Well-rotted manure. Delivery available.",
           img: "https://images.unsplash.com/photo-1598387846319-0b8b80cc9c15?q=80&w=1200",
           phone: "tel:+254700444444",
-          status: "Available",
+          status: "sold",
         },
         {
           id: 4,
@@ -154,7 +214,7 @@
           desc: "Well-rotted manure. Delivery available.",
           img: "https://images.unsplash.com/photo-1598387846319-0b8b80cc9c15?q=80&w=1200",
           phone: "tel:+254700444444",
-          status: "Available",
+          status: "sold",
         },
         {
           id: 5,
@@ -166,26 +226,7 @@
           phone: "tel:+254700555555",
           status: "Sold",
         },
-        {
-          id: 4,
-          title: "Farmyard Manure (per tonne)",
-          category: "Manure",
-          price: 4000,
-          desc: "Well-rotted manure. Delivery available.",
-          img: "https://images.unsplash.com/photo-1598387846319-0b8b80cc9c15?q=80&w=1200",
-          phone: "tel:+254700444444",
-          status: "Available",
-        },
-        {
-          id: 4,
-          title: "Farmyard Manure (per tonne)",
-          category: "Manure",
-          price: 4000,
-          desc: "Well-rotted manure. Delivery available.",
-          img: "https://images.unsplash.com/photo-1598387846319-0b8b80cc9c15?q=80&w=1200",
-          phone: "tel:+254700444444",
-          status: "Available",
-        },
+
         {
           id: 5,
           title: "Napier Grass (bale)",
@@ -287,6 +328,3 @@
     </script>
   </body>
 </html>
-
-
-
