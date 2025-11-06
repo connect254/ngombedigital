@@ -273,3 +273,11 @@
           height: 56px;
         }
       }
+      .notice{
+        border-style: solid;
+        border-color:blue;
+        color: red;
+        border-radius: 12px;
+        width: auto;
+        height: auto;
+      }
